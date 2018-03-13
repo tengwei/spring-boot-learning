@@ -3,10 +3,9 @@ package org.tw.data.jpa.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.interceptor.TransactionAspectSupport;
+import org.tw.data.jpa.service.TeacherService;
 import org.tw.data.jpa.domain.Teacher;
 import org.tw.data.jpa.repository.TeacherRepository;
-import org.tw.data.jpa.service.TeacherService;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -38,14 +37,15 @@ public class TeacherServiceImpl implements TeacherService {
 	}
 
 	@Override
-	@Transactional()
+	//@Transactional
 	public Teacher save(Teacher teacher){
 
 		teacherRepository.save(teacher);
 		teacher=teacherRepository.findOne(7);
 		teacher.setName("00011");
-		teacherRepository.save(teacher);
-		teacher=teacherRepository.findOne(7);
+
+		//teacherRepository.save(teacher);
+		//teacher=teacherRepository.findOne(7);
 
 		return teacher;
 		//回滚

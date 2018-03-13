@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.tw.data.jpa.domain.Teacher;
 import org.tw.data.jpa.service.TeacherService;
+import org.tw.data.jpa.domain.Teacher;
 
 import java.util.HashMap;
 import java.util.List;
