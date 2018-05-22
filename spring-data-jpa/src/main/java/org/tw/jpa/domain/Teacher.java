@@ -1,4 +1,4 @@
-package org.tw.data.jpa.domain;
+package org.tw.jpa.domain;
 
 import java.io.Serializable;
 import java.util.Date;

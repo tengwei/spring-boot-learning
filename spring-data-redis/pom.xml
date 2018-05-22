@@ -1,43 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.tw</groupId>
         <artifactId>spring-boot-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../spring-boot-parent/pom.xml</relativePath>
     </parent>
-    <groupId>org.tw.data.jpa</groupId>
-    <artifactId>spring-data-jpa</artifactId>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.tw.data.redis</groupId>
+    <artifactId>spring-data-redis</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-
-    <name>spring-data-jpa</name>
     <url>http://maven.apache.org</url>
+    <name>spring-data-redis</name>
 
     <properties>
 
     </properties>
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/io.lettuce/lettuce-core -->
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
+            <groupId>io.lettuce</groupId>
+            <artifactId>lettuce-core</artifactId>
+            <version>5.0.4.RELEASE</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+
     </dependencies>
+
     <build>
-        <finalName>spring-data-jpa</finalName>
+        <finalName>spring-data-redis</finalName>
     </build>
 </project>

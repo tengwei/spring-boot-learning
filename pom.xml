@@ -15,5 +15,6 @@
         <module>spring-boot-parent</module>
         <module>spring-data-jpa</module>
         <module>spring-boot-mybatis</module>
+        <module>spring-data-redis</module>
     </modules>
 </project>

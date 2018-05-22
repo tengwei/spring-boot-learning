@@ -1,8 +1,8 @@
-package org.tw.data.jpa.service;
+package org.tw.jpa.service;
 
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.Query;
-import org.tw.data.jpa.domain.Teacher;
+import org.tw.jpa.domain.Teacher;
 
 import javax.persistence.EntityManager;
 import java.util.List;

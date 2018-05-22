@@ -1,11 +1,11 @@
-package org.tw.data.jpa.service.impl;
+package org.tw.jpa.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import org.tw.data.jpa.service.TeacherService;
-import org.tw.data.jpa.domain.Teacher;
-import org.tw.data.jpa.repository.TeacherRepository;
+import org.tw.jpa.repository.TeacherRepository;
+import org.tw.jpa.service.TeacherService;
+import org.tw.jpa.domain.Teacher;
 
 import javax.transaction.Transactional;
 import java.util.List;

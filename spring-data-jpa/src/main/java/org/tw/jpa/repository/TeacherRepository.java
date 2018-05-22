@@ -1,8 +1,8 @@
-package org.tw.data.jpa.repository;
+package org.tw.jpa.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Lock;
-import org.tw.data.jpa.domain.Teacher;
+import org.tw.jpa.domain.Teacher;
 
 import javax.persistence.LockModeType;
 import java.util.List;
