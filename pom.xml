@@ -16,5 +16,6 @@
         <module>spring-data-jpa</module>
         <module>spring-boot-mybatis</module>
         <module>spring-data-redis</module>
+        <module>threadpool</module>
     </modules>
 </project>
