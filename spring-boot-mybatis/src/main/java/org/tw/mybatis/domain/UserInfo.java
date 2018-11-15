@@ -3,8 +3,6 @@ package org.tw.mybatis.domain;
 import java.io.Serializable;
 import java.util.Date;
 
-import com.alibaba.fastjson.annotation.JSONField;
-
 public class UserInfo implements Serializable {
 	private static final long serialVersionUID = 6519997700281088880L;
 	
@@ -13,9 +11,10 @@ public class UserInfo implements Serializable {
 	private String name;
 	
 	private String tel;
-	
-	@JSONField(format="yyyy-MM-dd")
+
 	private Date createTime;
+
+	private Date updateTime;
 
 	public int getId() {
 		return id;
@@ -47,5 +46,13 @@ public class UserInfo implements Serializable {
 
 	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
 	}
 }

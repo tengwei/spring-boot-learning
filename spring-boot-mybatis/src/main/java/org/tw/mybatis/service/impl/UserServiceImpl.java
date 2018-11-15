@@ -24,4 +24,9 @@ public class UserServiceImpl implements UserService {
 		return userMapper.findOne(id);
 	}
 
+	@Override
+	public void insert(UserInfo userInfo) {
+		userMapper.insert(userInfo);
+	}
+
 }

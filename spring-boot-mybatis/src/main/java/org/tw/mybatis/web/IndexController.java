@@ -1,14 +1,13 @@
 package org.tw.mybatis.web;
 
+import com.alibaba.fastjson.JSON;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.alibaba.fastjson.JSON;
-
+import org.springframework.web.bind.annotation.*;
+import org.tw.mybatis.domain.UserInfo;
 import org.tw.mybatis.service.UserService;
+
+import java.util.Date;
 
 @Controller
 public class IndexController {
@@ -34,5 +33,16 @@ public class IndexController {
 	@RequestMapping("user/{id}")
 	public String findById(@PathVariable int id) {
 		return JSON.toJSONString(userService.findOne(id));
+	}
+
+	@GetMapping("/add")
+	public void insert() {
+		UserInfo userInfo = new UserInfo();
+		userInfo.setCreateTime(new Date());
+		userInfo.setUpdateTime(new Date());
+		userInfo.setName("12");
+		userInfo.setTel("23434343");
+
+		userService.insert(userInfo);
 	}
 }

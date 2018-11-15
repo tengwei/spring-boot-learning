@@ -14,4 +14,6 @@ public interface UserService {
 	List<UserInfo> findAll();
 	
 	UserInfo findOne(int id);
+
+	void insert(UserInfo userInfo);
 }
